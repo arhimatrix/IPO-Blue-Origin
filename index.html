@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPO Valuation Dashboard</title>
+    <meta name="description" content="Data-driven market valuation dashboard for upcoming space industry IPOs.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>Space<span>Val</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#overview">Overview</a></li>
+                <li><a href="#revenue">Revenue Model</a></li>
+                <li><a href="#growth">Growth Projections</a></li>
+                <li><a href="#methodology">Valuation Methodology</a></li>
+                <li><a href="#risks">Risk Analysis</a></li>
+                <li><a href="#recommendation">Final Recommendation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header>
+                <div class="header-titles">
+                    <h2>Target Company IPO Valuation</h2>
+                    <p class="subtitle">Blue Origin Analysis Report</p>
+                </div>
+                <div class="market-status">
+                    <span class="pulse"></span> Live Analysis
+                </div>
+            </header>
+
+            <section id="overview" class="glass-card main-stat">
+                <h3>Total Market Valuation</h3>
+                <div class="valuation-number" id="market-cap">$0.00B</div>
+                <div class="price-targets">
+                    <div class="target">
+                        <span>Recommended Entry Price</span>
+                        <strong class="buy-price">$0.00</strong>
+                    </div>
+                    <div class="target">
+                        <span>Stop Price</span>
+                        <strong class="stop-price">$0.00</strong>
+                    </div>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <!-- Revenue Breakdown -->
+                <section id="revenue" class="glass-card">
+                    <h3>Revenue Breakdown</h3>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Growth Projections -->
+                <section id="growth" class="glass-card">
+                    <h3>Growth Projections (3-5 Years)</h3>
+                    <div class="chart-container">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                </section>
+                
+                <!-- Valuation Methodology -->
+                <section id="methodology" class="glass-card col-span-2">
+                    <h3>Valuation Methodology</h3>
+                    <div class="methodology-content">
+                        <h4>Revenue Multiples & DCF Hybrid</h4>
+                        <p>Given Blue Origin's transitional state, we applied a conservative 15x forward revenue multiple on projected 2028 revenues ($4.0B) for a base of $60B. We added a $5B premium recognizing the strategic monopoly position of Blue Moon in NASA's HLS architecture. Total Enterprise Value: $65B.</p>
+                    </div>
+                </section>
+
+                <!-- Risks -->
+                <section id="risks" class="glass-card">
+                    <h3>Risk Factors</h3>
+                    <ul class="risk-list">
+                        <li>
+                            <span class="risk-level high">High</span>
+                            <strong>New Glenn Execution Risk:</strong> Delays in operational launch cadence or early mission failures would severely impact Project Kuiper deployment revenue.
+                        </li>
+                        <li>
+                            <span class="risk-level medium">Medium</span>
+                            <strong>Customer Concentration:</strong> Heavy reliance on Amazon (Project Kuiper) and NASA for the vast majority of short-to-medium-term revenue.
+                        </li>
+                        <li>
+                            <span class="risk-level low">Low</span>
+                            <strong>Tourism Saturation:</strong> New Shepard suborbital tourism market experiencing demand saturation and margin compression.
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Recommendation -->
+                <section id="recommendation" class="glass-card recommendation-card">
+                    <h3>Final Recommendation</h3>
+                    <div class="decision-badge hold">PENDING</div>
+                    <p class="decision-rationale">Our analysis is currently being compiled based on the target company data. A final Buy, Hold, or Pass recommendation will be generated once the data model is fully populated.</p>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
