@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPO Valuation Dashboard</title>
+    <meta name="description" content="Data-driven market valuation dashboard for upcoming space industry IPOs.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>Space<span>Val</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a href="#overview">Overview</a></li>
+                <li><a href="#revenue">Revenue Model</a></li>
+                <li><a href="#growth">Growth Projections</a></li>
+                <li><a href="#methodology">Valuation Methodology</a></li>
+                <li><a href="#risks">Risk Analysis</a></li>
+                <li><a href="#recommendation">Final Recommendation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <div class="presentation-header">
+                <div class="company-badge-wrap">
+                    <div class="company-badge">BO</div>
+                    <span class="company-name">Blue Origin Enterprises</span>
+                </div>
+                <h2 class="valuation-title">Market valuation — three-scenario analysis</h2>
+                <p class="valuation-subtitle">Forward Revenue Multiple + Strategic Premium model • Projected to FY2028</p>
+                <p class="scenario-label">scenario breakdown</p>
+            </div>
+
+            <section id="scenarios" class="scenario-grid-light">
+                <!-- Bear Case -->
+                <div class="light-card bear-card">
+                    <div class="pill bear-pill">Bear case</div>
+                    <div class="val-label">valuation</div>
+                    <div class="val-number bear-text">$28B</div>
+                    <div class="divider"></div>
+                    <ul class="val-details">
+                        <li><span>2028 revenue</span> <strong>$2.0B</strong></li>
+                        <li><span>EV/Revenue multiple</span> <strong>10x</strong></li>
+                        <li><span>Base valuation</span> <strong>$20B</strong></li>
+                        <li><span>HLS strategic premium</span> <strong>+$2B</strong></li>
+                        <li><span>DLOM discount (25%)</span> <strong>&minus;$5.5B</strong></li>
+                    </ul>
+                    <div class="divider"></div>
+                    <div class="val-total">
+                        <span>Total</span> <strong>~$28B</strong>
+                    </div>
+                </div>
+                
+                <!-- Base Case -->
+                <div class="light-card base-card">
+                    <div class="pill base-pill">Base case ★</div>
+                    <div class="val-label">valuation</div>
+                    <div class="val-number base-text" id="market-cap">$42B</div>
+                    <div class="divider"></div>
+                    <ul class="val-details">
+                        <li><span>2028 revenue</span> <strong>$3.0B</strong></li>
+                        <li><span>EV/Revenue multiple</span> <strong>13x</strong></li>
+                        <li><span>Base valuation</span> <strong>$39B</strong></li>
+                        <li><span>HLS strategic premium</span> <strong>+$4B</strong></li>
+                        <li><span>DLOM discount (25%)</span> <strong>&minus;$10.7B</strong></li>
+                    </ul>
+                    <div class="divider"></div>
+                    <div class="val-total">
+                        <span>Total</span> <strong>~$42B</strong>
+                    </div>
+                </div>
+
+                <!-- Bull Case -->
+                <div class="light-card bull-card">
+                    <div class="pill bull-pill">Bull case</div>
+                    <div class="val-label">valuation</div>
+                    <div class="val-number bull-text">$65B</div>
+                    <div class="divider"></div>
+                    <ul class="val-details">
+                        <li><span>2028 revenue</span> <strong>$4.0B</strong></li>
+                        <li><span>EV/Revenue multiple</span> <strong>15x</strong></li>
+                        <li><span>Base valuation</span> <strong>$60B</strong></li>
+                        <li><span>HLS strategic premium</span> <strong>+$5B</strong></li>
+                        <li><span>DLOM discount</span> <strong>$0 (pre-IPO)*</strong></li>
+                    </ul>
+                    <div class="divider"></div>
+                    <div class="val-total">
+                        <span>Total</span> <strong>$65B</strong>
+                    </div>
+                </div>
+            </section>
+
+            <section id="quarters" class="quarters-section">
+                <div class="quarters-header">
+                    <h3>NEXT 4 QUARTERS — RECOMMENDED ENTRY PRICE & STOP PRICE</h3>
+                    <span class="updated-badge">UPDATED</span>
+                </div>
+                <div class="quarters-grid">
+                    <!-- Q3 2026 -->
+                    <div class="light-card quarter-card">
+                        <div class="q-title">Q3 2026</div>
+                        <div class="q-subtitle">IPO +1-3 months</div>
+                        <div class="divider"></div>
+                        <div class="q-row"><span>Entry range</span> <strong class="q-blue">$34–37</strong></div>
+                        <div class="q-row"><span>Stop price</span> <strong class="q-red">$27</strong></div>
+                        <div class="q-row"><span>Price target</span> <strong class="q-green">$44</strong></div>
+                        <div class="divider"></div>
+                        <p class="q-desc">Accumulate within the IPO discount band; wide stop absorbs liquidity shocks pre-lockup expiry</p>
+                    </div>
+                    <!-- Q4 2026 -->
+                    <div class="light-card quarter-card">
+                        <div class="q-title">Q4 2026</div>
+                        <div class="q-subtitle">Pre-lockup expiry</div>
+                        <div class="divider"></div>
+                        <div class="q-row"><span>Entry range</span> <strong class="q-blue">$35–39</strong></div>
+                        <div class="q-row"><span>Stop price</span> <strong class="q-red">$29</strong></div>
+                        <div class="q-row"><span>Price target</span> <strong class="q-green">$47</strong></div>
+                        <div class="divider"></div>
+                        <p class="q-desc">Insider selling pressure near the 180-day lockup expiry creates a dip-buying window</p>
+                    </div>
+                    <!-- Q1 2027 -->
+                    <div class="light-card quarter-card">
+                        <div class="q-title">Q1 2027</div>
+                        <div class="q-subtitle">First earnings season</div>
+                        <div class="divider"></div>
+                        <div class="q-row"><span>Entry range</span> <strong class="q-blue">$37–41</strong></div>
+                        <div class="q-row"><span>Stop price</span> <strong class="q-red">$31</strong></div>
+                        <div class="q-row"><span>Price target</span> <strong class="q-green">$52</strong></div>
+                        <div class="divider"></div>
+                        <p class="q-desc">First public earnings are a key catalyst; in-line revenue triggers re-rating, a miss breaks $32</p>
+                    </div>
+                    <!-- Q2 2027 -->
+                    <div class="light-card quarter-card">
+                        <div class="q-title">Q2 2027</div>
+                        <div class="q-subtitle">Business validation</div>
+                        <div class="divider"></div>
+                        <div class="q-row"><span>Entry range</span> <strong class="q-blue">$39–43</strong></div>
+                        <div class="q-row"><span>Stop price</span> <strong class="q-red">$33</strong></div>
+                        <div class="q-row"><span>Price target</span> <strong class="q-green">$58</strong></div>
+                        <div class="divider"></div>
+                        <p class="q-desc">New Glenn cadence and Artemis V milestones determine the premium ceiling</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="dashboard-grid">
+                <!-- Revenue Breakdown -->
+                <section id="revenue" class="glass-card">
+                    <h3>Revenue Breakdown</h3>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </section>
+
+                <!-- Growth Projections -->
+                <section id="growth" class="glass-card">
+                    <h3>Growth Projections (3-5 Years)</h3>
+                    <div class="chart-container">
+                        <canvas id="growthChart"></canvas>
+                    </div>
+                </section>
+                
+                <!-- Valuation Methodology -->
+                <section id="methodology" class="glass-card col-span-2">
+                    <h3>Valuation Methodology</h3>
+                    <div class="methodology-content">
+                        <h4>Three-Scenario Market Valuation</h4>
+                        <p>We ran a three-scenario analysis (Base, Bear, and Bull). Our Base Case (★) projects 2028 revenue at $3.0B. Applying a 13x EV/Revenue multiple yields a $39B Base Valuation. We added a $4B strategic premium for Blue Moon's HLS position. Total Base Case Enterprise Value: $42B.</p>
+                    </div>
+                </section>
+
+                <!-- Detailed Risks -->
+                <section id="risks" class="glass-card col-span-2">
+                    <h3>Risk Factor Analysis</h3>
+                    <div class="detailed-risks">
+                        <div class="risk-block">
+                            <div class="risk-header"><span class="risk-level high">High</span> <h4>New Glenn Execution Risk</h4></div>
+                            <p><strong>AI:</strong> Delays in operational launch cadence or early mission failures would severely impact Project Kuiper deployment revenue.</p>
+                            <p><strong>Rationale:</strong> Blue Origin’s $65B valuation relies entirely on the assumption that their heavy-lift rocket, New Glenn, will fly frequently and reliably starting in 2026/2027. Developing a reusable heavy-lift vehicle is incredibly difficult. If New Glenn suffers from prolonged launch delays, or worse, an early mission failure, the company will not be able to launch Amazon's Project Kuiper satellites on time.</p>
+                            <p><strong>Defense:</strong> If New Glenn does not achieve a steady launch cadence by 2027, our revenue model collapses. A failure here doesn't just mean a lost rocket; it means billions in deferred or canceled commercial contracts. This is exactly why we applied a discounted 15x multiple and recommended a HOLD instead of a BUY.</p>
+                            <p class="risk-solution"><strong>Solution:</strong> De-risk execution by prioritizing incremental validation: complete multiple successful test and early operational flights, reduce cadence ramp-up pressure, and diversify launch backlog beyond Project Kuiper to avoid single-program dependency during early operations.</p>
+                        </div>
+                        
+                        <div class="risk-block">
+                            <div class="risk-header"><span class="risk-level medium">Medium</span> <h4>Customer Concentration</h4></div>
+                            <p><strong>AI:</strong> Heavy reliance on Amazon (Project Kuiper) and NASA for the vast majority of short-to-medium-term revenue.</p>
+                            <p><strong>Rationale:</strong> A healthy aerospace company has hundreds of diverse commercial and government clients. Right now, Blue Origin’s future revenue is dangerously concentrated in just two massive clients: Amazon (Project Kuiper) and NASA (Blue Moon).</p>
+                            <p><strong>Defense:</strong> Our medium risk is customer concentration. If Amazon pivots its satellite strategy, or if the U.S. Congress slashes NASA's Artemis budget, a massive percentage of our projected 2028 revenue disappears overnight. While both clients are currently highly secure, having so much revenue tied up in just two entities is a structural vulnerability.</p>
+                            <div class="risk-solution">
+                                <strong>Solution:</strong> The main risk to Blue Origin’s current strategy appears to be positioning itself in the growing Low Earth Orbit (LEO) economy. With LEO already saturated by major players, namely SpaceX and its Starlink constellation, there is both risk and opportunity for Blue Origin depending on how access to space-based infrastructure is managed.
+                                <br><br>A potential direction could involve leveraging partnerships with companies like Amazon and its cloud platform Amazon Web Services to deliver data and connectivity services globally. One idea is to provide free or low-cost internet access—especially in developing regions—while integrating it into a broader ecosystem where users pay for premium services, memberships, or enhanced data access.
+                                <br><br>In this model, basic connectivity could be free worldwide, enabling instant access to information, while revenue would come from higher-tier services, subscriptions, or enterprise-level cloud usage. This would expand global digital inclusion while creating a scalable business model built on data access and infrastructure rather than just connectivity alone.
+                            </div>
+                        </div>
+                        
+                        <div class="risk-block">
+                            <div class="risk-header"><span class="risk-level low">Low</span> <h4>Space Tourism Saturation</h4></div>
+                            <p><strong>AI:</strong> New Shepard suborbital tourism market experiencing demand saturation and margin compression.</p>
+                            <p><strong>Rationale:</strong> Suborbital space tourism (New Shepard) is a luxury market. The pool of individuals willing to pay hundreds of thousands of dollars for a 10-minute flight is fundamentally limited. As the initial hype fades, demand will plateau and margins will compress.</p>
+                            <p><strong>Defense:</strong> We ranked tourism saturation as a low risk not because it won't happen—it likely will—but because it doesn't matter as much to our macro valuation. Tourism only makes up 15% of our revenue model. Even if the suborbital tourism market completely dries up, the financial bedrock of the company (heavy launch and lunar contracts) remains fully intact.</p>
+                            <p class="risk-solution"><strong>Solution:</strong> Maintain tourism as a secondary revenue stream by optimizing costs, bundling experiences, and repositioning New Shepard for research, training, and institutional clients rather than relying purely on luxury demand.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recommendation -->
+                <section id="recommendation" class="glass-card recommendation-card col-span-2">
+                    <h3>Final Recommendation & Action Plan</h3>
+                    <div class="recommendation-header">
+                        <div class="decision-badge hold">PENDING</div>
+                        <div class="conviction-badge">Conviction: <span id="conviction-level">Medium</span></div>
+                    </div>
+                    <div class="recommendation-details">
+                        <h4>Tie-Up to the Final Recommendations</h4>
+                        <div class="decision-rationale">
+                            <p>Investors who ignore risk lose money. Our HOLD recommendation is a direct reflection of our High-Risk factor within the three main fields identified. We advise keeping our $500M in the bank until:</p>
+                            <ul>
+                                <li><strong>For New Glenn:</strong> until it proves it can mitigate its execution risk by completing three successful operational flights.</li>
+                                <li><strong>For customer concentration:</strong> until revenue diversification beyond Amazon and NASA is clearly established.</li>
+                                <li><strong>For suborbital space tourism:</strong> until demand stabilizes or the business successfully shifts toward alternative use cases.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
